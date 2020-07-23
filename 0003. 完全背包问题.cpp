@@ -61,7 +61,7 @@ int main(){
     for(int i = 1;i<N+1;i++){
         for(int j = 1;j<V+1;j++){
             if(j>=v[i])
-                dp[j] = max(dp[j],dp[j-v[i]]+w[i]);
+                dp[j] = max(dp[j],dp[j-v[i]]+w[i]);   //跟01背包问题是一模一样的，区别在于这个j是从前往后遍历，原理是因为这个可以放多个，而01是从后往前因为只能放一个
         }
     }
     cout<<dp[V]<<endl;
